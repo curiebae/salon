@@ -1,8 +1,15 @@
 @charset "UTF-8";
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
@@ -29,7 +36,7 @@ body {
 }
 
 .inner {
-    max-width: 1440px;
+    max-width: 1280px;
     width: calc(100% - 30px);
     margin: 0 auto;
 }
@@ -53,10 +60,6 @@ body {
     font-size: 16px;
 }
 
-section {
-    width: 1280px;
-}
-
 .salon {
     margin: 0 auto;
     margin-top: 105px;
@@ -64,14 +67,31 @@ section {
 }
 
 .salon .logo {
-    width: 1280px;
-    height: 108px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.salon .logo img {
+.salon .logo .img01 {
+    width: 718px;
+    height: 108px;
+    margin-bottom: 35px;
+}
+
+.salon .logo .img01 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.salon .logo .img02 {
+    width: 206px;
+    height: 41px;
+}
+
+.salon .logo .img02 img {
+    width: 100%;
+    height: 100%;
 }
 
 .salon .mySwiper .swiper-wrapper .swiper-slide {
@@ -82,21 +102,29 @@ section {
     margin: 0 auto;
     margin-bottom: 100px;
 }
+
 .program .inner {
     display: flex;
     justify-content: space-between;
 }
+
 .program .left {
     width: 700px;
 }
+
 .program .left .box01 {
 
     display: flex;
     padding-bottom: 30px;
     justify-content: space-between;
 }
+
 .program .left .box01 .text h1 {
+    font-family: 'yg-jalnan';
     padding-bottom: 10px;
+}
+.program .left h2 {
+    font-family: 'yg-jalnan';
 }
 .program .left .box02 {
 
@@ -119,6 +147,7 @@ section {
     line-height: 80px;
     margin-right: 20px;
 }
+
 .program .left .box02 .text02 h1 {
     font-size: 18px;
 }
@@ -210,9 +239,11 @@ section {
 }
 
 .recipe h1 {
+    font-family: 'yg-jalnan';
     font-size: 45px;
     margin-bottom: 15px;
 }
+
 .recipe .inner h1 {
     text-align: center;
 }
@@ -222,16 +253,44 @@ section {
     font-size: 20px;
     margin-bottom: 60px;
 }
+.recipe .photo {
+    display: flex;
+    justify-content: space-between;
+}
+.recipe .photo .small {
+    display: flex;
+}
+/* .recipe .photo .line01 {
+    width: 50%;
+}
+.recipe .photo .line01 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.recipe .photo .line02 {
+    width: 50%;
+}
+.recipe .photo .line02 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+.recipe .photo .small img {
+    padding: 10px;
+}
 
 .now {
     margin: 0 auto;
 }
+
 .now .header {
     display: flex;
     justify-content: space-between;
-
 }
-
+.now .header h1 {
+    font-family: 'yg-jalnan';
+}
 .now .header .menu02 ul {
     display: flex;
     justify-content: space-between;
@@ -288,22 +347,52 @@ section {
     height: 100%;
     object-fit: cover;
 }
+.footer {
+    width: 100%;
+}
+.footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 @media screen and (max-width:960px) {
     .header {
         height: 100px;
     }
+
     .header nav {
         display: none;
     }
+
+    .salon .logo {
+        display: inline-block;
+    }
+    
+   /*  .recipe .photo .line02 {
+        display: inline-block;
+    } */
+    .recipe .photo .line03 {
+        display: none;
+    }
+    .mySwiper {
+        
+    }
+
+
+
 }
 
 @media screen and (max-width:390px) {
     .header {
         height: 65px;
     }
+
     .header nav {
         display: none;
     }
 
+    .program .inner .right {
+        display: none;
+    }
 }
